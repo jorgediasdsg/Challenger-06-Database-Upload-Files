@@ -2,9 +2,6 @@ import {
   getCustomRepository,
   getRepository,
   In,
-  getCustomRepository,
-  getRepository,
-  In,
   TransactionRepository,
 } from 'typeorm';
 import csvParse from 'csv-parse';
