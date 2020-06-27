@@ -16,7 +16,7 @@ transactionsRouter.post('/', async (request, response) => {
 
   const createTransaction = new CreateTransactionService();
 
-  const transaction = await createTransaction({
+  const transaction = await createTransaction.execute({
     title,
     value,
     type,
