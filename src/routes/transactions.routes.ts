@@ -12,7 +12,17 @@ transactionsRouter.get('/', async (request, response) => {
 });
 
 transactionsRouter.post('/', async (request, response) => {
-  // TODO
+  const { title, value, type, category } = request.body;
+
+  const createTransaction = new CreateTransactionService();
+
+  const transaction = await createTransaction({
+    title,
+    value,
+    type,
+    category,
+  });
+  return response.json(transaction);
 });
 
 transactionsRouter.delete('/:id', async (request, response) => {
