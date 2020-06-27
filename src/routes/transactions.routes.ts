@@ -14,7 +14,7 @@ transactionsRouter.get('/', async (request, response) => {
 
   return response.json(transactions);
 });
-
+// Ok
 transactionsRouter.post('/', async (request, response) => {
   const { title, value, type, category } = request.body;
 
